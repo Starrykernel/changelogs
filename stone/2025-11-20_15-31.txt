@@ -1,0 +1,107 @@
+Kernel: Starry
+Device: POCO X5 5G/Redmi Note 12 5G/Note 12R Pro (stone)
+Build Type: STABLE
+Compiler: Gf-r20251101 clang version 22.0.0git
+Date: 2025-11-20_15-31
+
+==== Latest Commits ====
+97835941684b8 build.sh: Sync Script with latest changes
+31a94a33319f2 AnyKernel3: sync with upstream
+7af9cfcdc7870 stone_defconfig: enable CONFIG_FAIR_GROUP_SCHED
+990bd9ef6bd0c stone_defconfig: Disable per-process reclaim
+4205974d8f88c lrng: Kconfig: Enable LRNG
+9ae557dbf4953 NTG.1: Require twice 240 bits only during initial seed
+22cfcc53a42f1 lrng: VDSO: match invocation of random.c
+defbb64d7084f lrng: Fix some NTG.1 naming and other inconsistencies
+9c2896aea6805 lrng: Use NTRNG min entropy for AIS 20 / 31 version 3.0
+fde2d2e713014 lrng: Add support for CONFIG_VDSO_GETRANDOM
+bacdfc0779c00 lrng: fix conflicting argument types in lrng functions
+44f65bf126094 char: update LRNG to v57
+e4690361c61aa crypto: move Jitter RNG header include dir
+2c6bc2bbf442d crypto: jitterentropy - Put constants on the right side of the expression
+473dfe9358bb2 lrng: sysctl: bring back last NULL terminator
+75f331b79dd8a lrng: fix compilation on arm64
+714203d05ed51 lrng: base backport for v53
+93470af7b4d5e LRNG - add hwrand framework interface
+f3496a79e0963 LRNG - add /dev/lrng device file support
+f5dca9422116b LRNG - add kernel crypto API interface
+1f33d27e70345 LRMG - add drop-in replacement random(4) API
+9a1952985072f LRNG - sysctls and /proc interface
+8730ff59e3014 LRNG - add power-on and runtime self-tests
+17b87ea6f5d2c LRNG - add interface for gathering of raw entropy
+2063d10e37a52 LRNG - add option to enable runtime entropy rate configuration
+9b326ad2e8db7 LRNG - add Jitter RNG fast noise source
+d5e9773341228 LRNG - CPU entropy source
+5ed5ef0c55e29 LRNG - add random.c entropy source support
+8cf825679e7f1 LRNG - add SP800-90B compliant health tests
+b0cae2f712faf LRNG - add scheduler-based entropy source
+d120bc213c899 scheduler - add entropy sampling hook
+952859fe57415 LRNG - add interrupt entropy source
+140eba5d19a81 LRNG - add common timer-based entropy source code
+31fb367deb0c3 LRNG - add atomic DRNG implementation
+30feddba32e49 LRNG - add kernel crypto API PRNG extension
+cf5ce5f76673e LRNG - add SP800-90A DRBG extension
+f353b88b367c8 crypto: DRBG - externalize DRBG functions for LRNG
+f76dd7936653c LRNG - add common generic hash support
+056c2b886ca9b LRNG - add switchable DRNG support
+60a67ca8fdda6 LRNG - /proc interface
+bff2058207d5c LRNG - allocate one DRNG instance per NUMA node
+d7553a6cbee10 LRNG: Entropy Source and DRNG Manager
+ff14ccfa50f03 lrng: base update for v53
+d1f3c9aaaee54 Merge tag 'LA.UM.9.14.r1-26500-LAHAINA.QSSI16.0' of https://git.codelinaro.org/clo/la/kernel/msm-5.4 into 16
+7a49d2ef18bd2 Merge branch 'android11-5.4-lts' of https://android.googlesource.com/kernel/common into 16
+0a9fade5bb3b5 qcacmn: i_qdf_trace: Align __qdf_bug() declaration with WLAN_DEBUG dependency
+d9110f71c32f1 zram: Move default compression algorithm choice to Kconfig
+f2145c74c3547 arm64: configs: stone: Disable irrelevant architectures
+bab84dcccce4c arch: arm64: Add toggle for STACKPROTECTOR_PER_TASK
+571daee34c9e7 dts: Disable unhandled or broken IRQ monitoring
+ccf29c26c93bc soc: qcom: watchdog: Modify some debug level
+a0cffd83207c3 string: improve default out-of-line memcmp() implementation
+e3d3fbe1a43ac sock: inline SELinux's sk_security to struct sock
+7377b01eb5d9b drivers: gpu: Move kgsl_3d_init to async probe
+aebe117c58b72 msm: kgsl: set/clear power_flags
+787a3371bea0d msm: kgsl: Fix syncsource spinlock recursion
+fc85604a07b18 msm: kgsl: Avoid gpu boot if it is already up
+f82767ac0259f msm-adreno-tz: Get rid of the sample lock
+e221f690f727f msm-adreno-tz: Get rid of the suspend lock
+c6f9e099251ce Revert "disp: msm: limit display brightness max cooling device level"
+b5c07e7dc0a95 techpack: display: Implement mi_get_disp_id
+00177bfc6f134 techpack: display: Implement KCAL color calibration
+63eff336fa913 techpack: drm: msm: always assume the panel is OLED
+b6e721b1765bb techpack: display: Implement interpolated LP2 brightness handling
+6daf49b2b7012 disp: rotator: set priority for rotator threads
+e892331d8f15a stone_defconfig: enable CONFIG_TMPFS_XATTR
+cbc5ef9063858 stone_defconfig: make fq_codel the default net scheduler
+f742fb40fa74a stone_defconfig: make bbr the tcp default congestion algorithm
+cb8bdc6df4ab1 stone_defconfig: enable stripped proc
+dc794a938c033 debloat: procfs
+300c02e428eb5 Kernel: Add APatch support config
+34fc4dbf66cad qcacld-3.0: cast A_ERROR return to QDF_STATUS
+6c4d69746191c ANDROID: GKI: fix up build break where timer_delete_sync() was used
+d9d086d36eb18 Revert "net: rtnetlink: remove redundant assignment to variable err"
+85c7d734c77f9 Revert "net: rtnetlink: add msg kind names"
+3f77162543610 Revert "net: rtnetlink: add helper to extract msg type's kind"
+2c1c741fc7730 Revert "net: rtnetlink: use BIT for flag values"
+11a4078a8ae23 Revert "net: netlink: add NLM_F_BULK delete request modifier"
+fc27935e9f321 Revert "net: rtnetlink: add bulk delete support flag"
+49a5ba893c108 Revert "net: rtnetlink: fix module reference count leak issue in rtnetlink_rcv_msg"
+2a0670011e32c Revert "net: add ndo_fdb_del_bulk"
+af72578d25172 Revert "net: rtnetlink: add NLM_F_BULK support to rtnl_fdb_del"
+13a2c8a68f387 Revert "rtnetlink: Allow deleting FDB entries in user namespace"
+f6520a7c9173e Merge 5.4.301 into android11-5.4-lts
+2e58fc1413e93 Linux 5.4.301
+283ee8ce3b31a net: rtnetlink: fix module reference count leak issue in rtnetlink_rcv_msg
+7d993371c1de9 media: s5p-mfc: remove an unused/uninitialized variable
+61e8a8c424b5d NFSD: Fix last write offset handling in layoutcommit
+702d8d6e7e4ec NFSD: Minor cleanup in layoutcommit processing
+a39ae0d8f8603 padata: Reset next CPU when reorder sequence wraps around
+07861d6371688 KEYS: trusted_tpm1: Compare HMAC values in constant time
+a75994dd87940 NFSD: Define a proc_layoutcommit for the FlexFiles layout type
+b5abafd0aa8d7 vfs: Don't leak disconnected dentries on umount
+71cdb58dc73c1 jbd2: ensure that all ongoing I/O complete before freeing blocks
+4954d297c91d2 ext4: detect invalid INLINE_DATA + EXTENTS flag combination
+301c668d5e21e drm/amdgpu: use atomic functions with memory barriers for vm fault info
+7bf46ff83a0ef ext4: avoid potential buffer over-read in parse_apply_sb_mount_options()
+05eb29effea69 spi: cadence-quadspi: Flush posted register writes before DAC access
+4612070e4cb12 spi: cadence-quadspi: Flush posted register writes before INDAC access
+5879837bfe46c memory: samsung: exynos-srom: Fix of_iomap leak in exynos_srom_probe

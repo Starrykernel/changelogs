@@ -1,0 +1,107 @@
+Kernel: Starry
+Device: POCO X5 5G/Redmi Note 12 5G/Note 12R Pro (stone)
+Build Type: STABLE
+Compiler: Gf-r20251101 clang version 22.0.0git
+Date: 2025-11-20_15-37
+
+==== Latest Commits ====
+87226202f9ffc build.sh: Sync Script with latest changes
+f1c5f7a13df0d qcacmn: i_qdf_trace: Align __qdf_bug() declaration with WLAN_DEBUG dependency
+7d0429047294a zram: Move default compression algorithm choice to Kconfig
+58aecbd27f425 arm64: configs: stone: Disable irrelevant architectures
+a01b31c12b0df arch: arm64: Add toggle for STACKPROTECTOR_PER_TASK
+50dbaeac42f82 dts: Disable unhandled or broken IRQ monitoring
+7e4bf2e8ea31e soc: qcom: watchdog: Modify some debug level
+3f9d38f35d0e2 string: improve default out-of-line memcmp() implementation
+6e6f76342e64b sock: inline SELinux's sk_security to struct sock
+66bf3d173f455 drivers: gpu: Move kgsl_3d_init to async probe
+8a4b06588ccdc msm: kgsl: set/clear power_flags
+cbd45107ed56d msm: kgsl: Fix syncsource spinlock recursion
+6a31cf5cbda8b msm: kgsl: Avoid gpu boot if it is already up
+a6bd485f48eed msm-adreno-tz: Get rid of the sample lock
+48f1892f9b0b9 msm-adreno-tz: Get rid of the suspend lock
+977a7926b9d61 Revert "disp: msm: limit display brightness max cooling device level"
+337f4c9bdc302 stone_defconfig: enable CONFIG_FAIR_GROUP_SCHED
+12ac63f65507e stone_defconfig: Disable per-process reclaim
+44d8a6be3efa5 lrng: Kconfig: Enable LRNG
+25ddb7981c759 NTG.1: Require twice 240 bits only during initial seed
+a0b0576759164 lrng: VDSO: match invocation of random.c
+8d1507f8522e4 lrng: Fix some NTG.1 naming and other inconsistencies
+fa6721e3c3880 lrng: Use NTRNG min entropy for AIS 20 / 31 version 3.0
+87e9f94a0a06b lrng: Add support for CONFIG_VDSO_GETRANDOM
+57eacdbe04ddd lrng: fix conflicting argument types in lrng functions
+44de977e78149 char: update LRNG to v57
+489c22c6a7a8d crypto: move Jitter RNG header include dir
+9aa4ffe5e25ea crypto: jitterentropy - Put constants on the right side of the expression
+09620a8539924 lrng: sysctl: bring back last NULL terminator
+1d3c14d06c9bf lrng: fix compilation on arm64
+094e392c78d4e lrng: base backport for v53
+eb4ec72f97734 LRNG - add hwrand framework interface
+69437ae9da935 LRNG - add /dev/lrng device file support
+a8511a145db12 LRNG - add kernel crypto API interface
+260cfc4797ff3 LRMG - add drop-in replacement random(4) API
+3618e462d4fa8 LRNG - sysctls and /proc interface
+0f167283255b9 LRNG - add power-on and runtime self-tests
+df7d77d240158 LRNG - add interface for gathering of raw entropy
+2f5cc29363096 LRNG - add option to enable runtime entropy rate configuration
+e79ae6a8383d0 LRNG - add Jitter RNG fast noise source
+577e78257aff6 LRNG - CPU entropy source
+2846ef313bdae LRNG - add random.c entropy source support
+c40be81620398 LRNG - add SP800-90B compliant health tests
+6745b25ed1140 LRNG - add scheduler-based entropy source
+f23283fe4a127 scheduler - add entropy sampling hook
+ae0588ef98a18 LRNG - add interrupt entropy source
+cab0e5ed88b9a LRNG - add common timer-based entropy source code
+1fb73b3a1db6d LRNG - add atomic DRNG implementation
+ca35ce29129b9 LRNG - add kernel crypto API PRNG extension
+1deed54213261 LRNG - add SP800-90A DRBG extension
+09cb42c5dfe33 crypto: DRBG - externalize DRBG functions for LRNG
+5ef2935abe3ad LRNG - add common generic hash support
+5981882ba0b0a LRNG - add switchable DRNG support
+a26b223a7e2ba LRNG - /proc interface
+b22a1b9da9c67 LRNG - allocate one DRNG instance per NUMA node
+9b3a70000e3ce LRNG: Entropy Source and DRNG Manager
+862a219165007 lrng: base update for v53
+19f0781a58460 Merge tag 'LA.UM.9.14.r1-26500-LAHAINA.QSSI16.0' of https://git.codelinaro.org/clo/la/kernel/msm-5.4 into 16-ksu
+5c6cf88c1b18a Merge branch 'android11-5.4-lts' of https://android.googlesource.com/kernel/common into 16-ksu
+5b79ceeae9bfa KernelSU: Optional Extras
+8595f9d26152f KernelSU: scope-minimized manual hooks v1.6
+d31a701eaf089 drivers: kernelsu: Build KernelSU
+d39c2bc354f3c BACKPORT: maccess: rename strncpy_from_unsafe_user to strncpy_from_user_nofault
+94c0d82933349 stone_defconfig: Enable KSU
+7242a677dc7d8 drivers: kernelsu: Import inline KernelSU
+d640ea9cb9fba [SQUASH] Revert Old Implimentation of KSU
+d1427132bd0e4 stone_defconfig: Enable KSU
+1a620589bc43a /proc/pid/maps: fake all lineage
+005499fbedcad drivers: staging: ksu: Hardcode version
+23f427c3fc993 drivers: staging: ksu: add umount calls
+35dee6e6fca54 drivers: staging: ksu: Try umount /system/etc/hosts
+3087c1f8a0416 drivers: staging: ksu: Refactor manager apk check method
+1444fc4d6c421 drivers: staging: ksu: Add support for custom signatures
+b670ee4f1b13e BACKPORT: maccess: rename strncpy_from_unsafe_user to strncpy_from_user_nofault
+25e0745bc74a8 drivers: staging: ksu: add ksu_handle_execve_ksud
+f0c8575a6acd2 drivers: staging: ksu: handle optional backports
+27fb95f3eb9d6 drivers: staging: ksu: Remove conditional for ksu_umount_mnt
+41a8bcc867d6a fs/internal: Add path_umount function
+070b62ae6a59a umount(2): move the flag validity checks first
+bda8ab1cc76ed fs: fix a struct path leak in path_umount
+e5002d4ee1104 fs: refactor ksys_umount
+781c6b455a78f drivers: staging: ksu: Remove KSU_GIT_VERSION
+68670e5c91bbb drivers: staging: ksu: Kconfig: Disable KSU by default
+303ee7bd790c5 drivers: staging: kernelsu: Silence spam logs
+8fadcf3395618 drivers: staging: ksu: Added support custom version userspace
+721ec9cbb4fb6 {Input,fs}: integrate scope-minimized manual hooks
+d91fe98449a06 selinux: Allow init exec ksud under nosuid
+d949463cc5a2e drivers: staging: ksu: Use global selinux state
+1aabe9f9c20fd drivers: staging: ksu: Build KernelSU
+09a0c8c070853 drivers: staging: ksu: expose allowlist workaround as Kconfig option
+452634381cc2d drivers: staging: ksu: NEXT v2 signature size/hash added
+ae14dabf9da4c drivers: staging: ksu: fix: reset ambient capabilities to resolve D-Bus permission issues
+cc228a3ba0a3a drivers: staging: ksu: Add fallback if user didn't implement 'get_cred_rcu'
+6d256c5317c8b drivers: staging: ksu: expose variables used by manual hooks always
+6e580559e911e drivers: staging: ksu: add non-kprobe support for sucompat disable/enable
+3820e136bde51 drivers: staging: ksu: guard functionality that requires kprobes
+4922a79150214 drivers: staging: ksu: Revert "[1.0] Drop Non-GKI Support"
+13c043c2c8cef drivers: staging: ksu: Revert "kernel: remove unused CONFIG guard becuase GKI kernel enable kprobe by default"
+a2d130954691e drivers: staging: Import inline KernelSU
+7d1de173413ce techpack: display: Implement mi_get_disp_id
