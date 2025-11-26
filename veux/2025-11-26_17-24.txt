@@ -1,0 +1,107 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: Gf-r20251101 clang version 22.0.0git
+Date: 2025-11-26_17-24
+
+==== Latest Commits ====
+e89066057531b KernelSU: Optional Extras
+0ab43a40b830f KernelSU: scope-minimized manual hooks v1.6
+2d2364bb6aa21 drivers: kernelsu: Build KernelSU
+82e738d9f208d BACKPORT: maccess: rename strncpy_from_unsafe_user to strncpy_from_user_nofault
+9f401842f1bd8 veux_defconfig: Enable KSU
+ea22bd53300f8 drivers: kernelsu: Import inline KernelSU
+06fcce22a81e6 build.sh: Adjust Kernel Zip Name for kernelsu versions
+0dd21454c9fb8 veux_defconfig: Remove dublicate entry of CONFIG_CRYPTO_CHACHA20POLY1305
+0bbe591651b6a veux_defconfig: enable pci
+6b6a0811aac13 drivers: Kconfig: nethunter: Enable Expanded Wireless, Bluetooth, SDR and Network File Sharing Support
+68c8cca382da6 drivers: net: can: Implementing support for the QinHeng Electronics HL-340 USB-Serial adapter.
+4b3cbe9f1fe83 drivers: media: dvb: properly configure for airspy, hackrf and msi2500
+23eca3a72966c rtl8188eus: Fix double opt-in protection macro names
+405ee58b663d6 rtl8814au: Removing redundant assignment i = i
+ddaa963c16c10 rtl8814au: Fixing pointer validation conditions using adapters [0]
+f6a79c5f8f7cc rtl8814au: Fix enum conversion warning
+c298a2131a4dd rtl8814au: Fixing indentation for correct function execution logic
+05e2395b6b089 rtl8814au: Eliminate possible NULL dereference
+2c91de7f0803b {rtl8812au, rtl8814au, rtl8188eus}: Initialize uninitialized variables
+5767dc9169c95 rtl8812au: Make the option GCC-compatible, but only for GCC
+5524f4fb1b7e6 drivers: rtl8x: Hardcore some headers path
+14835384cee09 drivers: Up rtl8188eus from SimplyCEO
+88e8d903416ec drivers: Up rtl8812au to v5.6.4.2
+530cd203ed444 drivers: Up rtl8814au to v5.8.5.1
+599f87dfef01f can: mcp251x: fix resume from sleep before interface was brought up
+ff6e60fb5cf42 can: mcp251xfd: mcp251xfd_probe(): add missing can_rx_offload_del() in error path
+9a249472d62f3 can: mcp251x: fix support for half duplex SPI host controllers
+799e14f66f306 can: mcp251x: Use readx_poll_timeout() helper
+71adc965d2d04 can: mcp251x: add GPIO support
+3f30a0aae38fc can: mcp251x: only reset hardware as required
+01488ba6f1459 can: mcp251x: add mcp251x_write_2regs() and make use of it
+d4dff7fca21a3 can: mcp251x: get rid of legacy platform data
+d49673364c096 can: mcp251x: sort include files alphabetically
+bf6b05995de07 can: mcp251x: add support for half duplex controllers
+314dc3185e2c7 can: mcp251xfd: mcp251xfd_probe(): fix errata reference
+1bdd6c5f80605  driver: MCP251xFD: backported from 5.10.x to 5.4.x
+399f52b0036d2 nethunter: Support for Extended CAN Capabilities and Utilities
+62e882edb110d can: iso-tp: Implement ISO 15765-2:2016 transport protocol
+410e5958cb155 can: can327: Fix compilation on Linux up to v5.4
+50c104ce48b8b can: can327: fix a broken link to Documentation
+47da7f28919f4 can: can327: Import CAN/ldisc driver for ELM327 based OBD-II adapters
+c4a81c4b1700f ANDROID: selinux: Fix Android specific configs handling in policydb_write()
+fe24ba5f7809b nethunter: Enable NetHunter only when KSU is enabled
+d9d433ef4b567 nethunter: Disable modules
+025df96e874c3 treewide: Add support nethunter
+09714beee8f53 sock: Security fix: Implement conditional PROT_SOCK
+f3b97402408d6 sock: Remove restrictions on port
+d451509a04298 HID: hid-picolcd*: Convert sprintf() family to sysfs_emit() family
+ccbcf374b4007 hid/picolcd_fb: Set FBINFO_VIRTFB flag
+7857dcb933f29 hid/hid-picolcd_fb: Use struct fb_info.screen_buffer
+c886ad22127d2 HID: hid-picolcd_fb: Use scnprintf() for avoiding potential buffer overflow
+c7b37a3bd7388 staging: removed part of code
+5aa571efa6c38 staging: rtl8812au: Fixed a Cflag
+36a8c75f187e0 staging: included rtl8188eus, rtl8812au & rtl8814au in source
+0fdedf2e2cbab staging: Fixed [ERROR is_broadcast_mac_addr undefined]
+7cc9ce942d3c2 Imported rtl8814au from https://github.com/aircrack-ng/rtl8814au
+f676566a10132 Imported rtl8812au from https://github.com/aircrack-ng/rtl8812au
+3eb58c8c88991 Imported rtl8188eus from https://github.com/aircrack-ng/rtl8188eus
+08c386362807d AnyKernel3: sync with upstream
+4a1a40f2962da build.sh: Sync Script with latest changes
+a1b46a1b59bee veux_defconfig: enable CONFIG_FAIR_GROUP_SCHED
+d1738130a9667 veux_defconfig: Disable per-process reclaim
+804708c8e52a0 lrng: Kconfig: Enable LRNG
+dc8b9225b666b NTG.1: Require twice 240 bits only during initial seed
+1188363c60e40 lrng: VDSO: match invocation of random.c
+61f91364d5930 lrng: Fix some NTG.1 naming and other inconsistencies
+243f02708726a lrng: Use NTRNG min entropy for AIS 20 / 31 version 3.0
+0792e7e067194 lrng: Add support for CONFIG_VDSO_GETRANDOM
+8f504009bf114 lrng: fix conflicting argument types in lrng functions
+e50ae744f5cce char: update LRNG to v57
+5578d32cbc371 crypto: move Jitter RNG header include dir
+ebaeb84c0cfd3 crypto: jitterentropy - Put constants on the right side of the expression
+baf062417c607 lrng: sysctl: bring back last NULL terminator
+081f2f0aae83e lrng: fix compilation on arm64
+33ea2d538bdcd lrng: base backport for v53
+5fa0900a0e722 LRNG - add hwrand framework interface
+97500c7f8a574 LRNG - add /dev/lrng device file support
+59855a5dbdc1b LRNG - add kernel crypto API interface
+f35f466accba3 LRMG - add drop-in replacement random(4) API
+27a7021e2397f LRNG - sysctls and /proc interface
+c50955c3182e9 LRNG - add power-on and runtime self-tests
+4be43ddbad51c LRNG - add interface for gathering of raw entropy
+277f7eab581db LRNG - add option to enable runtime entropy rate configuration
+b81285548b71a LRNG - add Jitter RNG fast noise source
+3e5b35062196c LRNG - CPU entropy source
+a864ddfe9fe53 LRNG - add random.c entropy source support
+b62901a9cb5e3 LRNG - add SP800-90B compliant health tests
+20cce1b0803f2 LRNG - add scheduler-based entropy source
+afe9f37691eaf scheduler - add entropy sampling hook
+8b4bac486cffd LRNG - add interrupt entropy source
+f2586403f41f3 LRNG - add common timer-based entropy source code
+58e3d7d7931ab LRNG - add atomic DRNG implementation
+3e9cadbca53da LRNG - add kernel crypto API PRNG extension
+718fd672af143 LRNG - add SP800-90A DRBG extension
+caf280c68d861 crypto: DRBG - externalize DRBG functions for LRNG
+f19b882f84e79 LRNG - add common generic hash support
+342e6ded2b4f4 LRNG - add switchable DRNG support
+1a2a51fd624db LRNG - /proc interface
+e40bfefab9247 LRNG - allocate one DRNG instance per NUMA node
+8bfbf8325ecee LRNG: Entropy Source and DRNG Manager

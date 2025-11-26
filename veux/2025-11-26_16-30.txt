@@ -1,0 +1,107 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: Gf-r20251101 clang version 22.0.0git
+Date: 2025-11-26_16-30
+
+==== Latest Commits ====
+08c386362807d AnyKernel3: sync with upstream
+4a1a40f2962da build.sh: Sync Script with latest changes
+a1b46a1b59bee veux_defconfig: enable CONFIG_FAIR_GROUP_SCHED
+d1738130a9667 veux_defconfig: Disable per-process reclaim
+804708c8e52a0 lrng: Kconfig: Enable LRNG
+dc8b9225b666b NTG.1: Require twice 240 bits only during initial seed
+1188363c60e40 lrng: VDSO: match invocation of random.c
+61f91364d5930 lrng: Fix some NTG.1 naming and other inconsistencies
+243f02708726a lrng: Use NTRNG min entropy for AIS 20 / 31 version 3.0
+0792e7e067194 lrng: Add support for CONFIG_VDSO_GETRANDOM
+8f504009bf114 lrng: fix conflicting argument types in lrng functions
+e50ae744f5cce char: update LRNG to v57
+5578d32cbc371 crypto: move Jitter RNG header include dir
+ebaeb84c0cfd3 crypto: jitterentropy - Put constants on the right side of the expression
+baf062417c607 lrng: sysctl: bring back last NULL terminator
+081f2f0aae83e lrng: fix compilation on arm64
+33ea2d538bdcd lrng: base backport for v53
+5fa0900a0e722 LRNG - add hwrand framework interface
+97500c7f8a574 LRNG - add /dev/lrng device file support
+59855a5dbdc1b LRNG - add kernel crypto API interface
+f35f466accba3 LRMG - add drop-in replacement random(4) API
+27a7021e2397f LRNG - sysctls and /proc interface
+c50955c3182e9 LRNG - add power-on and runtime self-tests
+4be43ddbad51c LRNG - add interface for gathering of raw entropy
+277f7eab581db LRNG - add option to enable runtime entropy rate configuration
+b81285548b71a LRNG - add Jitter RNG fast noise source
+3e5b35062196c LRNG - CPU entropy source
+a864ddfe9fe53 LRNG - add random.c entropy source support
+b62901a9cb5e3 LRNG - add SP800-90B compliant health tests
+20cce1b0803f2 LRNG - add scheduler-based entropy source
+afe9f37691eaf scheduler - add entropy sampling hook
+8b4bac486cffd LRNG - add interrupt entropy source
+f2586403f41f3 LRNG - add common timer-based entropy source code
+58e3d7d7931ab LRNG - add atomic DRNG implementation
+3e9cadbca53da LRNG - add kernel crypto API PRNG extension
+718fd672af143 LRNG - add SP800-90A DRBG extension
+caf280c68d861 crypto: DRBG - externalize DRBG functions for LRNG
+f19b882f84e79 LRNG - add common generic hash support
+342e6ded2b4f4 LRNG - add switchable DRNG support
+1a2a51fd624db LRNG - /proc interface
+e40bfefab9247 LRNG - allocate one DRNG instance per NUMA node
+8bfbf8325ecee LRNG: Entropy Source and DRNG Manager
+a5477969d163f lrng: base update for v53
+365908903be0c qcacmn: i_qdf_trace: Align __qdf_bug() declaration with WLAN_DEBUG dependency
+0b2eac7ac52c3 zram: Move default compression algorithm choice to Kconfig
+a0c9a5623b493 arm64: configs: veux: Disable irrelevant architectures
+27a40146c47c8 arch: arm64: Add toggle for STACKPROTECTOR_PER_TASK
+cedc248125625 dts: Disable unhandled or broken IRQ monitoring
+e9f8f3f996a6a soc: qcom: watchdog: Modify some debug level
+e7588323c428d string: improve default out-of-line memcmp() implementation
+69166e38d8468 sock: inline SELinux's sk_security to struct sock
+b3f7a1c8e4f8f drivers: gpu: Move kgsl_3d_init to async probe
+f342c503112d4 msm: kgsl: set/clear power_flags
+ae768ef897d64 msm: kgsl: Fix syncsource spinlock recursion
+077cdf02ff718 msm: kgsl: Avoid gpu boot if it is already up
+afc2ff41d4759 msm-adreno-tz: Get rid of the sample lock
+008c4f503efa4 msm-adreno-tz: Get rid of the suspend lock
+54564c8b0ed67 Revert "disp: msm: limit display brightness max cooling device level"
+a6150eb2b8abe techpack: display: Implement mi_get_disp_id
+143a3ce8abfa7 techpack: display: Implement KCAL color calibration
+cc42e12236988 techpack: drm: msm: always assume the panel is OLED
+058279de67e5b disp: rotator: set priority for rotator threads
+e00d81be53a58 stone_defconfig: enable CONFIG_TMPFS_XATTR
+8c0af9028012c stone_defconfig: make fq_codel the default net scheduler
+971e298652cd5 stone_defconfig: make bbr the tcp default congestion algorithm
+817a24325d8f0 stone_defconfig: enable stripped proc
+3a85a24fe0726 debloat: procfs
+7e60ab1e90018 Kernel: Add APatch support config
+599679bc0b312 qcacld-3.0: cast A_ERROR return to QDF_STATUS
+a2131d9847502 Anykernel3: Fix fastboot hang by adding override_cmdline and adjusting boot variables
+4725fc0bd6bb8 Anykernel3; Bump up to Android 16
+ebf63f2480396 Anykernel3: Rebrand to Starry Kernel
+3ca7fa3d9f0d0 qcacld-3.0: additional build fixes
+b4ed39e07f7a7 qcacld-3.0: Fix clang 16 error
+e52e96f1dcfe4 Revert "qcacld-3.0: Free a bunch of pkts at once"
+b2dc19f942e6f Revert "qcacld-3.0: Do not force the compilation of DFS debugging"
+f9627389a58f3 Revert "qcacld-3.0: disable DFS on AP mode"
+7f512be2075c1 Revert "qcacld-3.0: Disable debug configs"
+eb35089cd4e74 Rebrand to Starry Kernel
+84d0cd17674e6 build.sh: Sync Script with latest changes
+243a2b15ec84b adreno: disable coresight
+c108a3e2f1d8e kernel/sys.c: Spoof localversion to be "-qgki" for netmgrd
+fe3ca9eba04ec techpack: display: Enable dimlayer driver
+2112b66e71678 techpack: display: Make dimlayer exposure switchable
+c629215a7bca1 techpack: display: Introduce new exposure dim layer driver
+af8ce1ad06710 arm64: dts: blair: Drop Energy calcuting things cause they are making HWUI mad
+4671f871c51fc fw-api: Reset to CLO tag `LA.UM.9.14.r1-25500-LAHAINA.QSSI15.0`
+151aa17f49b9c ath9k: Fix naming conflict
+0b8b7e202930b arm64: configs: Enable Samsung Generic I/O Scheduler
+288fa7a2b8a16 ssg: import from Samsung SM-S908B_12_Opensource
+e0580242cc210 arm64: configs: Disable ARM64 PAN emulation
+0d4fc2aa7a95a arm64: Allow LD_DEAD_CODE_DATA_ELIMINATION to be selected
+95faba07c7177 Makefile: Use O3 optimization level for Clang LTO
+83150e26c0604 veux_defconfig: Enable CONFIG_USB_CONFIGFS_F_UVC
+c4261c6e76b4e ANDROID: gki_defconfig: enable CONFIG_USB_CONFIGFS_F_UVC
+083fae26fe48f usb: gadget: function: Import uvc from android13-5.10
+d23591722d675 BACKPORT: media: uvcvideo: move uvc_format_desc to common header
+890820fb56896 BACKPORT: media: v4l: move helper functions for fractions from uvc to v4l2-common
+ab80e8470f5af devfreq: Reduce polling interval to 50ms
+139f4b28312f9 Revert "devfreq: memlat: track cpu during ipi to cluster"
