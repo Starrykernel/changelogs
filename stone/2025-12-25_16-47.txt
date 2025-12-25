@@ -1,0 +1,15 @@
+Kernel: Starry
+Device: POCO X5 5G/Redmi Note 12 5G/Note 12R Pro (stone)
+Build Type: STABLE
+Compiler: Gf
+Date: 2025-12-25_16-47
+
+
+- Introduce Bore Scheduler
+- Introduce CASS
+- Add Xiaomi Touch Driver
+- Merged BPF changes from lineageos gerrit and https://github.com/AOSP-for-venus/platform_kernel_xiaomi_sm8350/commits/bak/
+- Merged Letest Changes from https://github.com/LineageOS/android_kernel_qcom_sm8350.git
+- Just Imported Device specific changes from https://github.com/xiaomi-sm6375-devs/android_kernel_xiaomi_moonstone
+- Fixed Alot of non stablitiy issues
+- Uprev KSU to 3.0.0 From https://github.com/backslashxx/KernelSU.git
