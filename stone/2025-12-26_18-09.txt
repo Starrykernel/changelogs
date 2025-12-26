@@ -1,0 +1,107 @@
+Kernel: Starry
+Device: POCO X5 5G/Redmi Note 12 5G/Note 12R Pro (stone)
+Build Type: STABLE
+Compiler: Gf
+Date: 2025-12-26_18-09
+
+==== Latest Commits ====
+07a195fe05de9 Add AnyKernel3
+535712dd101bc Add Build script
+b398df8034e0a [SQUASH] drivers: input: touchscreen: use known-working FT3519T driver for stone devices
+ea2f3cd06e0cb ANDROID: gki_defconfig: Enable HID_BETOP_FF JOYSTICK_XPAD_FF and JOYSTICK_XPAD_LEDS
+86d9bddef19eb BACKPORT: epoll: fix compat syscall wire up of epoll_pwait2
+e2d7d73b7caa8 BACKPORT: epoll: wire up syscall epoll_pwait2
+d500197016427 UPSTREAM: epoll: add syscall epoll_pwait2
+78daecd6980d7 UPSTREAM: epoll: convert internal api to timespec64
+8cd1f90e8e7bb UPSTREAM: close_range(): fix the logics in descriptor table trimming
+3aab2592e9630 UPSTREAM: fs: fix fd table size alignment properly
+e6e81aad58bab UPSTREAM: fs: fd tables have to be multiples of BITS_PER_LONG
+275abd8592a4e UPSTREAM: file: simplify logic in __close_range()
+0bfc79224f171 UPSTREAM: file: fix close_range() for unshare+cloexec
+083e2ff806d80 UPSTREAM: close_range: unshare all fds for CLOSE_RANGE_UNSHARE | CLOSE_RANGE_CLOEXEC
+68877855db526 UPSTREAM: fs, close_range: add flag CLOSE_RANGE_CLOEXEC
+f1e78a53cf875 BACKPORT: arch: wire-up close_range()
+1b139a95e936e UPSTREAM: close_range: add CLOSE_RANGE_UNSHARE
+d2c350e361e27 UPSTREAM: open: add close_range()
+96a06d8287f5b stone-qgki_defconfig: Xiaomi Touch Driver
+7944cd8db7910 drivers: input: Import Xiaomi Touch Driver
+fbf20b4eb7588 stone-qgki_defconfig: Add required configs for Apatch support
+cdb36d8e4f368 stone-qgki_defconfig: Enable Apatch Support
+f6ab80eced128 Kernel: Add APatch support config
+6572d66ecf788 stone-qgki_defconfig: Rebrand to Starry
+36d20aeff2c61 kernel: Use the stock defconfig for /proc/config.gz
+0958e8d9b907d qcacld-3.0: Fix compilation with Google clang 15.0.2
+8932cb307c8bc arm64: dts: holi/blair: Suppress verbose output during boot
+03223ec91fab0 arm64: dts: blair: Disable unhandled or broken IRQ monitoring
+aa2dc192eca7d arm64: vendor/dts: holi/blair: Disable coresight for holi
+104cdc22ec7e9 arm64: dts: blair: No APPS wake for Sensors QMI
+712462522a357 arm64: dts: holi/blair: Remove useless 44 MiB memory dump region
+585a5a98475fd veux-qgki_defconfig: Lower NR_CPUS to 8
+20c04a2c7b671 stone-qgki_defconfig: Trim down platforms support
+f7a60fcb1c0db ipa_v3: Fix enum conversion warnings
+062062ee53d46 Revert "msm: kgsl: Wake GPU upon receiving an ioctl rather than upon touch input"
+992ea106f117f drivers: silence IPC Logging failure
+59d4dc807ec90 treewide: Silence IPC log context creation failure messages
+a5dabf1c2eb6c msm: ipa: Fix simcard mobile data network and fix SIM detection
+4b45c04bbf2d5 qcacld-3.0: Enable monitor mode
+8f77b63e9cf95 proc: bootconfig: Add null pointer check
+5bbdadf0b19ba proc/bootconfig: Fix to use correct quotes for value
+4d5bd07b8aa5a proc: bootconfig: Add /proc/bootconfig to show boot config list
+b5715e318e3a9 bootconfig: Add Extra Boot Config support
+d1c41f68e6c4e kernel: Set Shadow Call Stack as default.
+c2ededdf86950 Makefile: Silence some noisy clang warnings
+e52c963b0c8b4 PM / sleep: Don't allow s2idle to be used
+ec0fd75a989c3 PM / freezer: Reduce freeze timeout to 1 second for Android
+96ba861ee0fed printk: disable console suspend by default
+57eb648f27cdb Arm64: kernel: Suppress overly verbose log spam
+dfe37370351da kernel: Initialize cpumask before parsing
+d9ea231c0aba4 arm64: cpufeature: Silence SANITY CHECK logspam
+5414786246237 block: neuron_block_server: silence useless logger
+a645d296bad3e fs: overlayfs: dont make DCACHE_OP_{HASH,COMPARE} weird Recent Android deprecated sdcardfs and uses native fs casefold functionality to achieve case insensitivity on /sdcard[1][2].
+e909559f7ac4b media: rc: Import ir-spi driver with Xiaomi changes
+c2b069e207ef4 Makefile: Allow compiler to eliminate useless NULL pointer checks
+5ceb4a980f22d vmlinux.lds.h: Catch MergedGlobals sections
+311be104629bf Makefile: Use O3 optimization level for Clang LTO
+c638975c7da71 FROMLIST: Makefile: lld: set -O2 linker flag when linking with LLD
+aec37d189537a Kconfig: Default to CC_OPTIMIZE_FOR_PERFORMANCE_O3 for clang
+74c280580f91c Documentation: Raise the minimum supported version of LLVM to 11.0.0
+15ccae4056dfe compiler-clang: add build check for clang 10.0.1
+5c84bc6278be4 Kconfig: default to CC_OPTIMIZE_FOR_PERFORMANCE_O3 for gcc >= 10
+16638acfcbc0e kernel: Warn when an IRQ's affinity notifier gets overwritten
+5048d277ef384 kernel: Only set one CPU in the default IRQ affinity mask
+0efb3ffc366a1 kernel: Don't allow IRQ affinity masks to have more than one CPU
+026f3500a4205 pinctrl: msm: Restore some barriers to prevent reordering of I/O writes
+cd6c94fd60ea5 pinctrl: msm: Remove explicit barriers from mmio ops where unneeded
+3a1dcd8760b80 msm: camera: Stub out the camera_debug_util API and compile it out
+c29fd90bff88f msm: kgsl: Don't try to wait for fences that have been signaled
+9731e3efe6279 msm: kgsl: Wake GPU upon receiving an ioctl rather than upon touch input
+aea58e4bc7051 msm: kgsl: Increase worker thread priority
+434f7b08dd381 msm: kgsl: Disable GPU memory usage tracing
+b6c054edee0b8 disp: msm: Recycle atomic state allocations to speed up atomic commits
+afce6a7e7022a disp: msm: Eliminate unnecessary snprintf() usage from hot paths
+f09563fbf8c22 disp: msm: Remove bogus NULL check in _msm_drm_commit_work_cb()
+18f57553ba7b4 disp: msm: Don't clear dim layers when there aren't any applied
+3d5d8ef4cf788 disp: msm: Don't read and clear VBIF errors upon commit
+fce15db901f2f disp: msm: Remove redundant write memory barriers from IRQ routines
+795f8bacb9568 disp: msm: Consolidate IRQ status reads into IRQ dispatcher
+624c2a098c904 disp: msm: Don't allocate memory dynamically for CRTC atomic check
+25fdd844b75a4 disp: msm: Don't allocate memory dynamically for plane states
+1c55a41681ae1 disp: msm: Remove unneeded PM QoS requests
+3015bdea629b4 disp: msm: do not send fps change events to notifier listeners
+dca6b3a41eb9d disp: msm: Compile out all debugging
+3b56d542fadc2 disp: msm: dsi-ctrl: Remove extra buffer copy
+50c8a55cbaed1 disp: msm: Micro-optimize IRQ handlers
+09cca23982b1d disp: config: Disable debug options
+7ea7af1505ebb stone-qgki_defconfig: Remove CPUFreq times driver
+cea6883fe33a7 stone-qgki_defconfig: Disable unused NLS configs
+cd57a5ae7d80f stone-qgki_defconfig: Disable virtually mapped stack
+47a740486b9d6 stone-qgki_defconfig: Disable EDAC
+1c11149a00c26 stone-qgki_defconfig: Disable CONFIG_HARDEN_BRANCH_PREDICTOR
+8f584b5c0e5e2 stone-qgki_defconfig: Disable profiling subsystem
+6c091f1d9afa8 uid_sys_stats: Remove dependency on the profiling subsystem
+559de92d5eab3 profiling: Implement a simple task exit notifier when disabled
+69b173a551ce2 PM / devfreq: Make the monitor workqueue high priority
+6007050bec812 stone-qgki_defconfig: Disable remaining debug stuff
+3d79431a3b10a stone-qgki_defconfig: Disable tracing
+12e5b7abe8291 mm, vmstat: Add likelihood labels to quiet_vmstat conditions
+611ae38792d6e PM / suspend: Default to suspend-to-idle instead of deep suspend
