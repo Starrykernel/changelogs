@@ -1,0 +1,8 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: ZyC clang version 23.0.0git
+Date: 2026-02-15_00-01
+
+- Uprev KSU to 3.1.0 From https://github.com/backslashxx/KernelSU.git
+- Fixed alot of instablity issues
