@@ -1,0 +1,7 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: ZyC clang version 23.0.0git
+Date: 2026-03-14_17-17
+
+- Changes are same as non ksu kernel veriant

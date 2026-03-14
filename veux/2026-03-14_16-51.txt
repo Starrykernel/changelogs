@@ -1,0 +1,39 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: ZyC clang version 23.0.0git
+Date: 2026-03-14_16-51
+
+- Switched from WALT tp PELT
+- Reduced touch latency by ~0.5–1 ms for more responsive screen input.
+- Improved CPU scheduling to avoid running threads on pre-empted virtual CPUs.
+- Prevented userspace from forcing CPU idle restrictions, improving power management stability.
+- Reduced unnecessary scheduler and IRQ log spam.
+- Improved battery capacity learning algorithm accuracy.
+- Fixed incorrect logic affecting maximum capacity limits.
+- Fixed coulomb counter inconsistencies causing incorrect battery reporting.
+- Fixed incorrect VBATT parameter during OCV recalculation.
+- Adjusted SOC handling when charge counter exceeds full capacity.
+- Implemented bypass charging support (power can bypass battery when conditions allow).
+- Improved charger detection by re-running APSD when required.
+- Optimized checkpointing and global tunables.
+- Improved extent cache handling.
+- Optimized node cache for faster app launches.
+- Improved I/O path performance.
+- Reduced latency by optimizing garbage collection behavior.
+- Improved ZRAM stability and performance.
+- Fixed locking issues in ZRAM read/write operations.
+- Prevented dangling compression pointers after reset.
+- Converted compression streams to per-CPU allocation.
+- Improved reclaim handling for ZRAM I/O.
+- Replaced deprecated sync functions for better reliability.
+- Disabled GRO and LRO offloading on RMNET to improve networking stability.
+- Reduced IPA deferred timeout for faster modem responses.
+- Improved QRTR wake behavior to wake device only when necessary.
+- Fixed drivers so USB devices suspend correctly, reducing idle power usage.
+- Improved CNSS suspend behavior when encountering retry errors.
+- Added option to disable TRACE_PRINTK for cleaner builds.
+- Updated Device Tree Compiler (DTC) to newer upstream versions.
+- Added support for fdtoverlay tool.
+- Removed unused dtc components and improved build performance.
+- Hidden /system/addon.d from user applications.
