@@ -1,0 +1,21 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: ZyC clang version 23.0.0git
+Date: 2026-04-01_20-29
+
+- Drop BORE
+- apply init protection
+- Set LZ4 as default zram compression algorithm
+- Upgrade to latest zstd v1.5.7
+- Enable multiple fast compression algorithms
+- Add support for zstd compressed kernel
+- Only log denials
+- Add Invisible Space
+- Add missing FM recording mixer setup
+- Spoof missing kernel files to libperfmgr via /dev/null
+- Force Enable HDR
+- Improve power usage on doze
+- Increase max nodes of bootconfig from 1024 to 8192 for DCC support
+- Add support for AIROHA GPS driver
+- Added support for TTL fixation
