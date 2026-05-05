@@ -1,0 +1,19 @@
+Kernel: Starry
+Device: Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux)
+Build Type: STABLE
+Compiler: ZyC clang version 23.0.0git
+Date: 2026-05-05_05-26
+
+- Add MGLRU
+- Add More KSU managers Support
+- Drop DTBO 
+- Introduce the Capacity Aware Superset Scheduler
+- Remove additional tracings added by CAF
+- Recalculate energy model (For holi & Blair)
+- Reduce dmesg size
+- raise GPU DDR bus floors
+- Provide more PELT half-life options
+- add interface for setting 50Hz tick rate
+- Add Support for HBM
+- Added compatibility check for unsupported Roms
+- Many Underthehood changes
